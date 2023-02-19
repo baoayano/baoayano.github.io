@@ -1,0 +1,271 @@
+/* last version for my site, i guess. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    background-color: #1e1e1e;
+    font-family: 'Inter', sans-serif;
+    scrollbar-color: #fff;
+    scrollbar-track-color: #2b2b2b;
+    scrollbar-width: 6px;
+}
+
+#load_wrapper {
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #fff;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 50px;
+}
+
+[frag="center"] {
+    text-align: center;
+}
+
+[frag="asako"] {
+    color: rgb(101, 140, 246);
+}
+
+[mt="1"] {
+    margin-top: 5px;
+}
+
+[mt="2"] {
+    margin-top: 15px;
+}
+
+[mt="3"] {
+    margin-top: 25px;
+}
+
+[mt="4"] {
+    margin-top: 35px;
+}
+
+[mt="5"] {
+    margin-top: 45px;
+}
+
+[line-height-nm] {
+    line-height: 30px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#my_avatar {
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* box-shadow: 0 0 0 3px rgb(101, 140, 246); */
+    transition: transform .15s;
+    margin-bottom: 35px;
+}
+
+#my_avatar:hover {
+    transform: scale(1.03);
+}
+
+.letsgoahead {
+    display: block;
+    cursor: pointer;
+    border: 2px solid #202020;
+    background-color: #202020;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0.85rem 1.75rem;
+    margin-top: 25px;
+    margin-left:auto;
+    margin-right: auto;
+    transition: transform .15s;
+}
+
+.letsgoahead:hover {
+    transform: scale(1.03);
+}
+
+.content_frag {
+    margin: 50px 20%;
+}
+
+.frag {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+#big_frag {
+    background-color: #1c1c1c;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.skills_frag {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills_frag .skills_item {
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    background-color: transparent;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.skills_frag .skills_item i {
+    font-size: 50px;
+}
+
+.skills_frag .skills_item .skills_info {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.skills_frag .skills_item .skills_info .skills_bar {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 2rem;
+    margin-top: 10px;
+}
+
+.skills_frag .skills_item .skills_info .skills_bar::before {
+    border-radius: 2rem;
+    display: block;
+    content: '';
+    z-index: 3;
+    position: relative;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    transition: width 3s;
+}
+
+.skills_frag .skills_item .skills_info .skills_bar.active:before {
+    width: var(--progress);
+}
+
+.list_connections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.list_connections a {
+    font-size: 25px;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: opacity .15s;
+}
+
+.list_connections a:first-child {
+    margin-left: 0;
+}
+
+.list_connections a:last-child {
+    margin-right: 0;
+}
+
+.list_connections a:hover {
+    opacity: 0.75;
+}
+
+.thatscopyright {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #1c1c1c;
+}
+
+.bruhcopyright {
+    text-align: center;
+    color: #e5e5e5;
+}
+
+@media (max-width:650px) {
+    #big_frag {
+        flex-direction: column;
+    }
+
+
+    .content_frag {
+        margin: 50px 45px;
+    }
+
+    .skills_frag {
+        flex-direction: column;
+    }
+
+    .skills_frag .skills_item {
+        width: 100%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2b2b2b;
+}
