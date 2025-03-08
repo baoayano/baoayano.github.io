@@ -20,18 +20,18 @@
 
     var iframe = document.createElement("iframe");
     iframe.src = "https://chat.socialintents.com/c/chat-1741428562417";
-    iframe.style = "position:fixed;bottom:0;right:0;z-index:10000;width:300px;height:500px;display:none;";
+    iframe.style = "position:fixed;bottom:0;left:0;z-index:10000;width:300px;height:500px;display:none;";
     iframe.className = "hide";
 
     var toggle = document.createElement("button")
-    toggle.style = "position:fixed;top:0;right:9px;z-index:10001;cursor:pointer;opacity:0;"
+    toggle.style = "position:fixed;top:0;left:9px;z-index:10001;cursor:pointer;opacity:0;"
     toggle.innerText = "đóng =)))"
     toggle.addEventListener("click", function () {
         if (iframe.className == "show") {
-            iframe.style = "position:fixed;bottom:0;right:0;z-index:10000;width:300px;height:500px;display:none;"
+            iframe.style = "position:fixed;bottom:0;left:0;z-index:10000;width:300px;height:500px;display:none;"
             iframe.className = "hide";
         } else {
-            iframe.style = "position:fixed;bottom:0;right:0;z-index:10000;width:300px;height:500px;"
+            iframe.style = "position:fixed;bottom:0;left:0;z-index:10000;width:300px;height:500px;"
             iframe.className = "show";
         }
     })
