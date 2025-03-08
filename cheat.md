@@ -1,6 +1,6 @@
 # Cài đặt công cụ
 
-![Công cụ bổ trợ](https://www.tampermonkey.net/)
+[Công cụ bổ trợ](https://www.tampermonkey.net/)
 
 # Script cài đặt gói công cụ
 ```js
